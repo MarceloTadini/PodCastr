@@ -17,6 +17,7 @@
         gap: 1rem;
     }
 
+
     strong{
         font-family: Lexend, sans-serif;
         font-weight: 600;
@@ -28,6 +29,30 @@
         &.empty {
             opacity: 0.5;
         }
+    }
+}
+
+.currentEpisode{
+    text-align: center;
+
+    img{
+        width: 200px;
+        height: 200px;
+        border-radius: 1.5rem;
+    }
+
+    strong{
+        display: block;
+        margin-top: 2rem;
+        font: 600 1.25rem Lexend, sans-serif;
+        line-height: 1.75rem;
+    }
+
+    span{
+        display: block;
+        margin-top: 1rem;
+        opacity: 0.6;
+        line-height: 1.5rem;
     }
 }
 
@@ -81,13 +106,27 @@
         background: transparent;
         border: 0;
         font-size: 0;
+        transition: .4s;
+
+        &:disabled{
+            cursor: default;
+        }
+
+        &:hover:not(:disabled){
+            filter: brightness(0.8);
+        }
 
         &.playButton{
             width: 4rem;
             height: 4rem;
             border-radius: 1rem;
             background: var(--purple-400);
+
+            &:hover:not(:disabled){
+                filter: brightness(0.95);
+            }
         }
+
     }
 }
 
